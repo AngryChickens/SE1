@@ -9,6 +9,9 @@
 		<a class="btn btn-primary" data-ng-click="remove();">
 			<i class="glyphicon glyphicon-trash"></i>
 		</a>
+		<a class="btn btn-primary" data-ng-click="addItem();">
+			<i class="glyphicon glyphicon-plus"></i>
+		</a>
 	</div>
 	<small>
 		<em class="text-muted">
@@ -16,7 +19,22 @@
 			<span data-ng-bind="article.created | date:'mediumDate'"></span>
 			by
 			<span data-ng-bind="article.user.displayName"></span>
+
 		</em>
 	</small>
 	<p class="lead" data-ng-bind="article.content"></p>
+	<div class="list-group">
+		<a data-ng-repeat="article in articles" data-ng-href="#!/articles/{{article._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="article.created | date:'mediumDate'"></span>
+				by
+				<span data-ng-bind="article.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="article.title"></h4>
+			<p class="list-group-item-text" data-ng-bind="article.content"></p>
+			<p class="list-group-item-text" data-ng-bind="article.startDate"></p>
+			<p class="list-group-item-text" data-ng-bind="article.endDate"></p>
+		</a>
+	</div>
 </section>

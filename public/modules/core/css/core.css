@@ -13,6 +13,9 @@
 .ng-valid.ng-dirty {
 	border-color: #78FA89;
 }
+body {
+	background-color: #66FFCC !important;
+}
 .browsehappy.jumbotron.hide,
 body.ng-cloak
 {
