@@ -23,6 +23,15 @@
 						<p ng-show="articleForm.content.$error.required" class="text-danger">Target value is required</p>
 					</div>
 				</div>
+				<div class="form-group" ng-class="{ 'has-error' : submitted && articleForm.content.$invalid}">
+					<label class="control-label" for="currentBalance">Current Balance</label>
+					<div class="controls">
+						<input name="currentBalance" data-ng-model="article.currentBalance" id="currentBalance" class="form-control"  placeholder="Current Balance" required></input>
+					</div>
+					<div ng-show="submitted && articleForm.content.$invalid" class="help-block">
+						<p ng-show="articleForm.content.$error.required" class="text-danger">Current Balance value is required</p>
+					</div>
+				</div>
 				<div class="form-group" ng-class="{ 'has-error' : submitted && articleForm.startDate.$invalid}">
 					<label class="control-label" for="startDate">Start Date</label>
 					<div class="controls">
