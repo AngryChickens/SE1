@@ -51,7 +51,8 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<input type="submit" value="Update" class="btn btn-default">
+					<input type="submit" value="Update" class="btn btn-primary">
+					<input data-ng-click="remove();" type="submit" value="Delete" class="btn btn-primary" width="">
 				</div>
 				<div data-ng-show="error" class="text-danger">
 					<strong data-ng-bind="error"></strong>
