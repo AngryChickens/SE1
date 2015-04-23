@@ -3,7 +3,7 @@
 		<h1>Budgets</h1>
 	</div>
 	<div class="list-group">
-		<a data-ng-repeat="article in articles" data-ng-href="#!/articles/{{article._id}}" class="list-group-item">
+		<a data-ng-repeat="article in articles" data-ng-show="authentication.user._id == article.user._id" data-ng-href="#!/articles/{{article._id}}" class="list-group-item">
 			<small class="list-group-item-text">
 				Posted on
 				<span data-ng-bind="article.created | date:'mediumDate'"></span>
