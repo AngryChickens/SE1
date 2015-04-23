@@ -21,7 +21,7 @@ var ArticleSchema = new Schema({
 		required: 'Title cannot be blank'
 	},
 	content: {
-		type: String,
+		type: Number,
 		default: '',
 		trim: true,
 		required: 'Target Value cannot be blank'
@@ -35,6 +35,10 @@ var ArticleSchema = new Schema({
 		type: Date,
 		default: '',
 		required: 'End Date cannot be blank'
+	},
+	currentBalance: {
+		type: Number,
+		default: 0
 	},
 	user: {
 		type: Schema.ObjectId,
