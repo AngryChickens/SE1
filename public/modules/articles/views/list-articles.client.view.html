@@ -11,12 +11,14 @@
 				<span data-ng-bind="article.user.displayName"></span>
 			</small>
 			<h4 class="list-group-item-heading" data-ng-bind="article.title"></h4>
-			Targe Value: <p class="list-group-item-text" data-ng-bind="article.content"></p>
-			Current Value: <p class="list-group-item-text" data-ng-bind="article.currentBalance"></p>
-			<p class="list-group-item-text" data-ng-bind="article.startDate"></p>
-			<p class="list-group-item-text" data-ng-bind="article.endDate"></p>
+			<p class="list-group-item-text"> Target Value: $<span data-ng-bind="article.content"></span></p>
+			<p class="list-group-item-text"> Current Balance: $<span data-ng-bind="article.currentBalance"></span></p>
+			<p class="list-group-item-text"> Start Date: <span data-ng-bind="article.startDate | date:'MM/dd/yyyy'"></span></p>
+			<p class="list-group-item-text"> End Date: <span data-ng-bind="article.endDate | date:'MM/dd/yyyy'"></span></p>
 		</a>
+		
 	</div>
+	
 	<div class="alert alert-warning text-center" data-ng-if="articles.$resolved && !articles.length">
 		No budgets yet, why don't you <a href="/#!/articles/create">create one</a>?
 	</div>
