@@ -12,7 +12,8 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 				title: this.title,
 				content: this.target,
 				startDate: this.startDate,
-				endDate: this.endDate
+				endDate: this.endDate,
+				currentBalance: 0
 			});
 
 			// Redirect after save

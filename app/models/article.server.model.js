@@ -22,23 +22,21 @@ var ArticleSchema = new Schema({
 	},
 	content: {
 		type: Number,
-		default: '',
 		trim: true,
-		required: 'Target Value cannot be blank'
+		required: 'Target Value must be a value greater than 0 and cannot be blank'
 	},
 	startDate: {
 		type: Date,
-		default: '',
+		trim: true,
 		required: 'Start Date cannot be blank'
 	},
 	endDate: {
 		type: Date,
-		default: '',
+		trim: true,
 		required: 'End Date cannot be blank'
 	},
 	currentBalance: {
-		type: Number,
-		default: 0
+		type: Number
 	},
 	user: {
 		type: Schema.ObjectId,

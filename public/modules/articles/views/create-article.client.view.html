@@ -15,19 +15,19 @@
 				<div class="form-group">
 					<label class="control-label" for="content">Target Value</label>
 					<div class="controls">
-						<input name="target" data-ng-model="target" id="target" class="form-control"placeholder="Target Value"/>
+						<input name="target" type="number" min="1" data-ng-model="target" id="target" class="form-control"placeholder="Target Value" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="control-label" for="startDate">Start Date</label>
 					<div class="controls">
-						<input type"date" name="startDate" data-ng-model="startDate" simple-date-pick sdp-on-date-selected="myChosenDate(seldate)" id="startDate" class="form-control" placeholder="Start Date"/>
+						<input type"date" name="startDate" data-ng-model="startDate" simple-date-pick sdp-on-date-selected="myChosenDate(seldate)" id="startDate" class="form-control" placeholder="Start Date" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="control-label" for="endDate">End Date</label>
 					<div class="controls">
-						<input name="endDate" data-ng-model="endDate" id="endDate" class="form-control"placeholder="End Date"/>
+						<input type="date" name="endDate" data-ng-model="endDate" id="endDate" class="form-control"placeholder="End Date" required>
 					</div>
 				</div>
 				<div class="form-group">
