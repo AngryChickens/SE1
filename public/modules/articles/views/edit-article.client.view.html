@@ -35,7 +35,7 @@
 				<div class="form-group" ng-class="{ 'has-error' : submitted && articleForm.startDate.$invalid}">
 					<label class="control-label" for="startDate">Start Date</label>
 					<div class="controls">
-						<input name="startDate" data-ng-model="article.startDate.toLocaleDateString()" id="startDate" class="form-control"  placeholder="article.startDate" required></input>
+						<input name="startDate" data-ng-model="article.startDate" id="startDate" class="form-control"  placeholder="article.startDate" required></input>
 					</div>
 					<div ng-show="submitted && articleForm.content.$invalid" class="help-block">
 						<p ng-show="articleForm.content.$error.required" class="text-danger">Start Date value is required</p>
